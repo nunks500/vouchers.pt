@@ -1,4 +1,5 @@
 {
+  "homepage": "http://nunks500.github.io/vouchers.pt",
   "name": "vouchers.pt",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "vite build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -23,6 +25,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
